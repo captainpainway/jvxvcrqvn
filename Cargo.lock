@@ -422,8 +422,10 @@ name = "jvxvcrqvn"
 version = "0.1.0"
 dependencies = [
  "iron",
+ "percent-encoding 2.1.0",
  "reqwest",
  "router",
+ "serde_json",
 ]
 
 [[package]]

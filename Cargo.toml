@@ -10,3 +10,5 @@ edition = "2018"
 iron = "0.6.*"
 router = "*"
 reqwest = { version = "0.10", features = ["json", "blocking"] }
+serde_json = "1.0"
+percent-encoding = "2.1.0"
