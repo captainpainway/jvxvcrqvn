@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: monospace;
+        }
+        main {
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button onclick="location.href='/';">{{ back_button }}</button>
+        <button onclick="location.href='/enaqbz'">{{ refresh_button }}</button>
+        <h2>{{ title }}</h2>
+        {% for para in content %}
+        <p>{{ para }}</p>
+        {% endfor %}
+        <button onclick="location.href='/';">{{ back_button }}</button>
+        <button onclick="location.href='/enaqbz'">{{ refresh_button }}</button>
+    </main>
+</body>
+</html>
