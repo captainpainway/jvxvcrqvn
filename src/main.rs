@@ -21,7 +21,7 @@ fn main() {
 
 fn handler(_: &mut Request) -> IronResult<Response> {
     let content_type = ContentType::html().0;
-    let tera = Tera::new("../../templates/**/*").unwrap();
+    let tera = Tera::new("http://jvxvcrqvn.herokuapp.com/templates/**/*").unwrap();
     let mut context = Context::new();
     context.insert("title", &rot13("ROT13 Wikipedia".to_owned()));
     context.insert("description", &rot13("Wikipedia articles returned encoded in ROT13. Click the button below for a random article. This site is meant to be nonsense.".to_owned()));
@@ -39,7 +39,7 @@ fn random_handler(_: &mut Request) -> IronResult<Response> {
     let body = text.1;
 
     let content_type = ContentType::html().0;
-    let tera = Tera::new("../../templates/**/*").unwrap();
+    let tera = Tera::new("http://jvxvcrqvn.herokuapp.com/templates/**/*").unwrap();
     let mut context = Context::new();
     context.insert("title", &title);
     context.insert("content", &body);
