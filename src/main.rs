@@ -1,5 +1,6 @@
 mod cipher;
 
+use std::env;
 use iron::prelude::*;
 use iron::status;
 use iron::headers::ContentType;
@@ -15,8 +16,10 @@ fn main() {
     let mut router = Router::new();
     router.get("/", handler, "index");
     router.get("/enaqbz", random_handler, "random");
+    let port = env::var("PORT").unwrap_or_else(|_| "3000".to_string());
+    let addr = format!("0.0.0.0:{}", port);
 
-    Iron::new(router).http("0.0.0.0:3000").unwrap();
+    Iron::new(router).http(addr).unwrap();
 }
 
 fn handler(_: &mut Request) -> IronResult<Response> {
