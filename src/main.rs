@@ -39,7 +39,7 @@ fn random_handler(_: &mut Request) -> IronResult<Response> {
     let body = text.1;
 
     let content_type = ContentType::html().0;
-    let tera = Tera::new("templates/**/*").unwrap();
+    let tera = Tera::new("../../templates/**/*").unwrap();
     let mut context = Context::new();
     context.insert("title", &title);
     context.insert("content", &body);
