@@ -16,7 +16,7 @@ fn main() {
     router.get("/", handler, "index");
     router.get("/enaqbz", random_handler, "random");
 
-    Iron::new(router).http("localhost:3000").unwrap();
+    Iron::new(router).http("jvxvcrqvn.herokuapp.com").unwrap();
 }
 
 fn handler(_: &mut Request) -> IronResult<Response> {
