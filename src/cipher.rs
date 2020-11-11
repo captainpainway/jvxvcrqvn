@@ -1,9 +1,8 @@
+use std::char;
+
 pub fn rot13(message: String) -> String {
-    let alphabet = [
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ];
-    let upper_alphabet: Vec<_> = alphabet.iter().map(|c| c.to_ascii_uppercase()).collect();
+    let alphabet: Vec<char> = (97..123).map(|n| char::from_u32(n).unwrap()).collect();
+    let upper_alphabet: Vec<char> = (65..91).map(|n| char::from_u32(n).unwrap()).collect();
 
     message.chars()
         .map(|c| *alphabet.iter()
